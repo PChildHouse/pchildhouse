@@ -1,6 +1,7 @@
 package pchild.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,20 +10,26 @@ import java.util.Date;
  * Time: 8:54 PM
  */
 @Entity
-@Table(name = "PCH_USER")
-public class User {
-    private Integer id;
+@Table(name = "pch_user")
+@NamedQueries({
+        @NamedQuery(name = "User.findAll", query = "select u from User u"),
+        @NamedQuery(name = "User.findById", query = "select u from User u where u.id = :id"),
+        @NamedQuery(name = "User.findByUserName", query = "select u from User u where u.username = :username")
+})
+public class User implements Serializable{
+    private Long id;
     private String username;
     private String password;
     private Date createdDate;
 
     @Id
     @Column(name = "ID")
-    public Integer getId() {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

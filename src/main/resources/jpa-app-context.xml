@@ -38,9 +38,11 @@
     </bean>
 
     <context:annotation-config/>
+    <!--
     <jpa:repositories base-package="pchild.repository"
                       entity-manager-factory-ref="emf"
                       transaction-manager-ref="transactionManager" />
+                      -->
 
     <context:component-scan base-package="pchild.service, pchild.common" />
 

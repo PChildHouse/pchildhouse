@@ -1,2 +1,2 @@
 INSERT INTO PCH_USER
-VALUES ('test', '1234', SYSDATE);
+VALUES ('1', 'test', '1234', '2011-10-21');

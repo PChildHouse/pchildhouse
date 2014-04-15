@@ -12,7 +12,8 @@
     <title>登录</title>
 </head>
 <body>
-    <form id="login" action="login" method="post">
+    <h1>${message}</h1>
+    <form id="login" action="/user/login" method="post">
         <label for="username">用户名</label>
         <input id="username" type="text" name="username" />
         <br/>
