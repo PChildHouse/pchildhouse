@@ -39,7 +39,7 @@ public class UserController {
             uiModel.addAttribute("message", "Wrong username or password");
         }
 
-        return "login";
+        return "user/login";
     }
 
     public UserService getUserService() {

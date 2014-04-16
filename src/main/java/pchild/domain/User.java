@@ -10,11 +10,11 @@ import java.util.Date;
  * Time: 8:54 PM
  */
 @Entity
-@Table(name = "pch_user")
+@Table(name = "PCH_USER")
 @NamedQueries({
         @NamedQuery(name = "User.findAll", query = "select u from User u"),
         @NamedQuery(name = "User.findById", query = "select u from User u where u.id = :id"),
-        @NamedQuery(name = "User.findByUserName", query = "select u from User u where u.username = :username")
+        @NamedQuery(name = "User.findByUsername", query = "select u from User u where u.username = :username")
 })
 public class User implements Serializable{
     private Long id;
